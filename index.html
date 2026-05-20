@@ -1,80 +1,147 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Bro</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body{
-      margin:0;
-      background:#080312;
-      color:white;
-      font-family:tahoma;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      min-height:100vh;
+<title>Happy Birthday Bro</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#080312;
+    font-family:tahoma;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.card{
+    width:90%;
+    max-width:700px;
+    background:#12051f;
+    border:2px solid #ff4fd8;
+    border-radius:25px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 0 35px #ff4fd888;
+}
+
+img{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+h1{
+    color:#ff70ea;
+    font-size:45px;
+    margin-bottom:10px;
+    text-shadow:0 0 10px #ff4fd8;
+}
+
+.text{
+    line-height:2;
+    font-size:19px;
+    color:#ffd7f7;
+}
+
+.heart{
+    margin-top:30px;
+    font-size:70px;
+    cursor:pointer;
+    animation:pulse 1.2s infinite;
+    transition:.3s;
+    user-select:none;
+}
+
+.heart:hover{
+    transform:scale(1.15);
+}
+
+.note{
+    margin-top:10px;
+    opacity:.8;
+    font-size:15px;
+}
+
+.small{
+    margin-top:25px;
+    opacity:.6;
+    font-size:14px;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
     }
 
-    .card{
-      width:90%;
-      max-width:700px;
-      text-align:center;
-      background:#12051f;
-      border:2px solid #ff4fd8;
-      border-radius:20px;
-      padding:20px;
-      box-shadow:0 0 30px #ff4fd8aa;
+    50%{
+        transform:scale(1.1);
     }
 
-    img{
-      width:100%;
-      border-radius:15px;
-      margin-bottom:20px;
+    100%{
+        transform:scale(1);
     }
+}
 
-    h1{
-      color:#ff6be7;
-      font-size:42px;
-      margin-bottom:10px;
-    }
-
-    p{
-      line-height:2;
-      font-size:18px;
-      color:#ffd9f7;
-    }
-
-    .small{
-      margin-top:20px;
-      opacity:.7;
-      font-size:14px;
-    }
-  </style>
+</style>
 </head>
+
 <body>
 
-  <div class="card">
+<div class="card">
 
-    <img src="pony.png" alt="birthday">
+<img src="pony.png">
 
-    <h1>Happy Birthday Bro 🎉</h1>
+<h1>Happy Birthday Bro 🎉</h1>
 
-    <p>
-      می‌دونم قرار بود امروز با بقیه بچه‌ها بیام بیرون
-      ولی نشد بیام :(
-      <br><br>
-      فقط خواستم بدونی واقعاً آدم مهم و باحالی‌ای هستی
-      و امیدوارم امسال برات پر از حال خوب،
-      خنده و اتفاقای خفن باشه ✨
-    </p>
+<div class="text">
 
-    <div class="small">
-      stay awesome :)
-    </div>
+ قرار بود امروز با بقیه همکلاسیا بیام بیرون
+ولی نشد :(
+<br><br>
 
-  </div>
+فقط خواستم بدونی واقعاً آدم مهم و باحالی هستی
+و خوشحالم این اواخر بیشتر رفیق شدیم ✨
+<br><br>
+
+امیدوارم امسال برات پر از حال خوب،
+خنده و اتفاقای خفن باشه.
+
+</div>
+
+<div class="heart" onclick="playMusic()">
+❤️
+</div>
+
+<div class="note">
+برای سوپرایز روی قلب بزن 🎵
+<br>
+(صدا گوشیت صفر نباشه دلقک )
+</div>
+
+<div class="small">
+stay awesome :)
+</div>
+
+<audio id="song">
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+
+function playMusic(){
+    document.getElementById("song").play();
+}
+
+</script>
 
 </body>
 </html>
